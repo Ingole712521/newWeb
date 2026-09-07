@@ -77,7 +77,7 @@ export function StudioShell() {
             ))}
           </nav>
 
-          <Link to="/works/silver-pumps" className="cta">
+          <Link to="/works/agl" className="cta">
             Gothrough
           </Link>
         </header>

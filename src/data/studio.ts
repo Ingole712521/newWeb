@@ -1,4 +1,5 @@
 import type { Article, Category, Film, NavId, Work } from '../types'
+import { aglWorkImages } from './aglStage'
 
 export const studio = {
   name: '360 Branding Studio',
@@ -68,12 +69,72 @@ export const categories: Category[] = [
 
 export const works: Work[] = [
   {
+    slug: 'agl',
+    client: 'AGL',
+    sector: 'Ceramics',
+    year: '2026',
+    location: 'Morbi',
+    featured: true,
+    summary:
+      'Collection catalogues and sample binders for a tile house — photographed as objects a dealer can actually hold.',
+    brief:
+      'AGL needed literature that reads as product, not as a PDF on a screen. We designed collection books and sample binders for Double Charge, Glifo, Signature, Marblex, and the rest of the 2026 line, then shot them on the desk they live on.',
+    perspectives: ['print', 'stationery', 'photography'],
+    outcomes: [
+      { label: 'Collections', value: '12+' },
+      { label: 'Binders', value: '4 systems' },
+      { label: 'Year', value: '2026' },
+    ],
+    tiles: [
+      {
+        id: 'double',
+        span: 'book',
+        art: 'brandbook',
+        alt: 'AGL double-charge catalogue mockup',
+        image: aglWorkImages.double001,
+        caption: 'Double Charge',
+      },
+      {
+        id: 'glifo',
+        span: 'sm',
+        art: 'pamphlet',
+        alt: 'Glifo collection catalogue',
+        image: aglWorkImages.glifo,
+        caption: 'Glifo',
+      },
+      {
+        id: 'signature',
+        span: 'tall',
+        art: 'brandbook',
+        alt: 'AGL Signature catalogue',
+        image: aglWorkImages.signature,
+        caption: 'Signature',
+      },
+      {
+        id: 'fresco',
+        span: 'phone',
+        art: 'brandbook',
+        alt: 'Fresco Rizon collection 2026',
+        image: aglWorkImages.fresco,
+        caption: 'Fresco Rizon',
+      },
+      {
+        id: 'binder',
+        span: 'logo',
+        art: 'packaging',
+        alt: 'Fiona Greige Trivera sample binder',
+        image: aglWorkImages.binderFiona,
+        caption: 'Sample binder',
+      },
+    ],
+  },
+  {
     slug: 'silver-pumps',
     client: 'Silver Pumps & Motors',
     sector: 'Industrial',
     year: '2025',
     location: 'Rajkot',
-    featured: true,
+    featured: false,
     summary:
       'A full identity for a pump manufacturer: mark, kit, literature, social, and the people who wear it.',
     brief:
