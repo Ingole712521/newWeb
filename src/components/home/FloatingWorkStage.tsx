@@ -9,6 +9,7 @@ import {
 import type { MouseEvent } from 'react'
 import { Link } from 'react-router-dom'
 import { aglStageCards, type AglStageCard } from '../../data/aglStage'
+import { studio } from '../../data/studio'
 
 type CardProps = {
   card: AglStageCard
@@ -61,7 +62,7 @@ function FloatingCard({ card, mx, my, reduce }: CardProps) {
               }
         }
       >
-        <Link to="/works/agl" className="float-card-link" aria-label={card.alt}>
+        <Link to="/work" className="float-card-link" aria-label={card.alt}>
           <img
             src={card.src}
             alt=""
@@ -113,21 +114,19 @@ export function FloatingWorkStage() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="float-kicker">AGL · Catalogues &amp; binders</p>
-          <h2>
-            Tile literature, shot as objects
-          </h2>
+          <p className="float-kicker">360 Branding Studio</p>
+          <h1>The print-first branding studio</h1>
           <p className="float-dek">
-            Collection books and sample binders for a ceramics house — printed
-            matter that has to hold up on a dealer desk.
+            Catalogues, binders, marks, and kit — identity built for objects
+            people actually hold.
           </p>
           <div className="float-actions">
-            <Link to="/works/agl" className="float-btn float-btn-solid">
-              Open the case
+            <Link to="/work" className="float-btn float-btn-solid">
+              See the work
             </Link>
-            <Link to="/works" className="float-btn float-btn-ghost">
-              All works
-            </Link>
+            <a href={`mailto:${studio.email}`} className="float-btn float-btn-ghost">
+              Talk
+            </a>
           </div>
         </motion.div>
       </div>

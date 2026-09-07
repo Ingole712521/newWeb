@@ -60,8 +60,14 @@ body,
   background: var(--ink);
 }
 
-body {
+html.is-home,
+html.is-home body {
   overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
 }
 
 #root {
