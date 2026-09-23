@@ -52,6 +52,10 @@
   box-sizing: border-box;
 }
 
+html {
+  font-family: var(--sans);
+}
+
 html,
 body,
 #root {
@@ -62,8 +66,8 @@ body,
 
 html.is-home,
 html.is-home body {
-  overflow: hidden;
-  height: 100%;
+  overflow: auto;
+  height: auto;
 }
 
 body {

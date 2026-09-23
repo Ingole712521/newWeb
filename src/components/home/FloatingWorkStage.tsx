@@ -13,7 +13,7 @@ export function FloatingWorkStage() {
         <Mascot
           directions={publicAsset('/mascots/studio-directions.webp')}
           reactions={publicAsset('/mascots/studio-reactions.webp')}
-          size={520}
+          size={420}
           label="360 studio mascot"
         />
       </div>

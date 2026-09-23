@@ -95,16 +95,18 @@
 
 .home-mascot {
   position: absolute;
-  right: 1vw;
-  bottom: -4%;
+  top: 50%;
+  right: 5vw;
   z-index: 2;
+  translate: 0 -50%;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-mascot button {
-  width: min(48vw, 34rem) !important;
-  height: min(48vw, 34rem) !important;
+  width: min(38vw, 26rem) !important;
+  height: min(38vw, 26rem) !important;
 }
 
 .float-card {
@@ -237,6 +239,36 @@
 
 .work-page {
   padding: calc(var(--nav-h) + 1.5rem) clamp(1.1rem, 3vw, 2.4rem) 4rem;
+}
+
+.page {
+  padding: calc(var(--nav-h) + 1.5rem) clamp(1.1rem, 3vw, 2.4rem) 5rem;
+  color: var(--snow);
+}
+
+.page-kicker {
+  font-family: var(--mono);
+  font-size: var(--text-micro);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--mute);
+}
+
+.page-title {
+  margin-top: 0.45rem;
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 4vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.page-lead {
+  margin-top: 0.75rem;
+  max-width: 48ch;
+  font-size: var(--text-body);
+  line-height: var(--lead-body);
+  color: var(--mist);
 }
 
 .work-intro {
@@ -409,14 +441,12 @@
 
   .home-mascot {
     right: 50%;
-    bottom: auto;
-    top: 4.6rem;
-    transform: translateX(50%);
+    translate: 50% -50%;
   }
 
   .home-mascot button {
-    width: min(72vw, 18rem) !important;
-    height: min(72vw, 18rem) !important;
+    width: min(64vw, 16rem) !important;
+    height: min(64vw, 16rem) !important;
   }
 
   .float-copy {

@@ -1,6 +1,7 @@
 import { useEffect, useId, useState } from 'react'
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { studio } from '../../data/studio'
+import { CinematicFooter } from './CinematicFooter'
 import '../../styles/site.css'
 
 export function SiteFrame() {
@@ -60,6 +61,8 @@ export function SiteFrame() {
       <main>
         <Outlet />
       </main>
+
+      <CinematicFooter />
 
       <div className="drawer" hidden={!open} onClick={() => setOpen(false)}>
         <div

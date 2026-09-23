@@ -1,5 +1,8 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { SiteFrame } from './components/layout/SiteFrame'
+import { AboutPage } from './pages/AboutPage'
+import { BlogPage } from './pages/BlogPage'
+import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
 import { WorksPage } from './pages/WorksPage'
 
@@ -11,6 +14,9 @@ export default function App() {
           <Route index element={<HomePage />} />
           <Route path="work" element={<WorksPage />} />
           <Route path="works" element={<Navigate to="/work" replace />} />
+          <Route path="about" element={<AboutPage />} />
+          <Route path="blog" element={<BlogPage />} />
+          <Route path="contact" element={<ContactPage />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
