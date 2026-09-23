@@ -32,7 +32,7 @@ export function SiteFrame() {
     <div className={home ? 'site site-home' : 'site'}>
       <header className="site-nav">
         <Link to="/" className="site-brand">
-          360 Branding
+          Ravindra Soyam
         </Link>
 
         <nav className="site-links" aria-label="Primary">
