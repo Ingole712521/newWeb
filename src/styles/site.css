@@ -90,7 +90,21 @@
   height: 100svh;
   min-height: 36rem;
   overflow: hidden;
-  background: #000;
+  background: #070b10;
+}
+
+.home-mascot {
+  position: absolute;
+  right: 1vw;
+  bottom: -4%;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+}
+
+.home-mascot button {
+  width: min(48vw, 34rem) !important;
+  height: min(48vw, 34rem) !important;
 }
 
 .float-card {
@@ -134,22 +148,17 @@
   z-index: 6;
   height: 100%;
   display: grid;
-  place-items: center;
-  text-align: center;
-  padding: 5.5rem 1.4rem 2rem;
+  align-items: center;
+  justify-items: start;
+  text-align: start;
+  padding: 5.5rem clamp(1.4rem, 5vw, 4.2rem) 2rem;
   pointer-events: none;
 }
 
 .float-copy-inner {
   pointer-events: auto;
   max-width: 28rem;
-  padding: 2.6rem 1.5rem 2.2rem;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(0, 0, 0, 0.92) 0%,
-    rgba(0, 0, 0, 0.55) 52%,
-    rgba(0, 0, 0, 0) 78%
-  );
+  padding: 0;
 }
 
 .float-kicker {
@@ -174,7 +183,7 @@
 }
 
 .float-dek {
-  margin: 0.95rem auto 0;
+  margin: 0.95rem 0 0;
   max-width: 36ch;
   font-size: var(--text-ui);
   line-height: 1.5;
@@ -186,7 +195,7 @@
   margin-top: 1.45rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   gap: 0.65rem;
 }
 
@@ -398,8 +407,26 @@
     display: grid;
   }
 
-  .float-card:not(.float-card-keep) {
-    display: none;
+  .home-mascot {
+    right: 50%;
+    bottom: auto;
+    top: 4.6rem;
+    transform: translateX(50%);
+  }
+
+  .home-mascot button {
+    width: min(72vw, 18rem) !important;
+    height: min(72vw, 18rem) !important;
+  }
+
+  .float-copy {
+    align-items: end;
+    padding-bottom: 2.2rem;
+    background: linear-gradient(
+      transparent 28%,
+      rgba(7, 11, 16, 0.82) 72%,
+      rgba(7, 11, 16, 0.94) 100%
+    );
   }
 
   .work-shot.span-wide,
