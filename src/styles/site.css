@@ -88,7 +88,7 @@
   position: relative;
   isolation: isolate;
   display: grid;
-  grid-template-columns: minmax(20rem, 42%) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 46%) minmax(0, 54%);
   min-height: 100svh;
   overflow: hidden;
   background: #0b0b0b;
@@ -153,52 +153,64 @@
 
 .poster-copy {
   position: relative;
-  z-index: 3;
+  z-index: 6;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  min-width: 0;
   min-height: 100svh;
-  padding: calc(var(--nav-h) + 1.4rem) 3.2rem 4.5rem 4.2rem;
+  padding: calc(var(--nav-h) + 1.6rem) 1.6rem 5rem 5.5vw;
+  overflow: hidden;
+  container-type: inline-size;
 }
 
 .poster-role {
-  margin: 0 0 0.85rem;
-  font-size: 0.72rem;
+  margin: 0 0 0.7rem;
+  font-family: var(--mono);
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.22em;
+  line-height: 1.2;
   text-transform: uppercase;
   color: var(--mist);
 }
 
 .poster-copy h1 {
   margin: 0;
-  font-family: var(--display);
-  font-size: clamp(3.4rem, 2.2rem + 5.2vw, 6rem);
-  font-weight: 800;
-  line-height: 0.86;
-  letter-spacing: -0.04em;
+  font-family: var(--poster);
+  font-size: clamp(3.1rem, 24cqi, 8.4rem);
+  font-weight: 400;
+  line-height: 0.84;
+  letter-spacing: 0.01em;
   text-transform: uppercase;
-  text-wrap: balance;
+  color: #f4f2ed;
+}
+
+.poster-copy h1 span {
+  display: block;
+  white-space: nowrap;
 }
 
 .poster-services {
-  margin: 0.85rem 0 0;
-  font-family: var(--display);
-  font-size: clamp(1.05rem, 0.7rem + 1.4vw, 1.55rem);
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  line-height: 1.1;
+  margin: 0.55rem 0 0;
+  font-family: var(--poster-sub);
+  font-size: clamp(1.15rem, 8.6cqi, 3.15rem);
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  line-height: 1.05;
   text-transform: uppercase;
   color: transparent;
-  -webkit-text-stroke: 1px rgba(244, 244, 242, 0.82);
+  -webkit-text-stroke: 1.2px #e8e4dc;
+  white-space: nowrap;
 }
 
 .poster-dek {
   margin: 1.35rem 0 0;
-  max-width: 36ch;
-  font-size: 0.98rem;
-  line-height: 1.55;
-  color: var(--mist);
+  max-width: 34ch;
+  font-size: 0.9375rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #b5b2ab;
   text-wrap: pretty;
 }
 
@@ -253,14 +265,14 @@
 }
 
 .poster-talk {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--snow);
-  text-decoration: underline;
-  text-underline-offset: 0.28em;
-  text-decoration-thickness: 1px;
 }
 
 .poster-talk:hover {
@@ -370,7 +382,9 @@
 .poster-board {
   position: relative;
   z-index: 2;
+  min-width: 0;
   min-height: 100svh;
+  overflow: hidden;
 }
 
 .board-card {
@@ -527,14 +541,17 @@
 
 .board-mascot {
   position: absolute;
-  top: 18%;
-  left: 28%;
-  z-index: 6;
+  inset: 0;
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  pointer-events: none;
 }
 
 .board-mascot button {
-  width: min(28vw, 20rem) !important;
-  height: min(28vw, 20rem) !important;
+  width: min(42vw, 28rem) !important;
+  height: min(42vw, 28rem) !important;
+  pointer-events: auto;
 }
 
 .board-show {
@@ -885,11 +902,20 @@
   .poster {
     grid-template-columns: 1fr;
     min-height: auto;
-    overflow: visible;
+    overflow: hidden;
   }
 
   .poster-copy {
     padding: calc(var(--nav-h) + 1.2rem) 1.4rem 1.5rem;
+  }
+
+  .poster-copy h1 {
+    font-size: clamp(3.2rem, 16vw, 5.6rem);
+  }
+
+  .poster-services {
+    white-space: normal;
+    font-size: clamp(1.15rem, 5.4vw, 1.85rem);
   }
 
   .poster-copy-year {

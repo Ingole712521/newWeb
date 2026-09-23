@@ -22,9 +22,8 @@ export function FloatingWorkStage() {
         >
           <p className="poster-role">Graphic designer</p>
           <h1>
-            Graphic
-            <br />
-            designer
+            <span>Graphic</span>
+            <span>Designer</span>
           </h1>
           <p className="poster-services">Branding / Print / Digital</p>
           <p className="poster-dek">
@@ -39,6 +38,7 @@ export function FloatingWorkStage() {
             </Link>
             <a href={`mailto:${studio.email}`} className="poster-talk">
               Let's talk
+              <span className="poster-cta-line" aria-hidden="true" />
             </a>
           </div>
         </motion.div>
@@ -103,7 +103,7 @@ export function FloatingWorkStage() {
           <Mascot
             directions={publicAsset('/mascots/studio-directions.webp')}
             reactions={publicAsset('/mascots/studio-reactions.webp')}
-            size={340}
+            size={520}
             label="Studio mascot"
           />
         </div>
